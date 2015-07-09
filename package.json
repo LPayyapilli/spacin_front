@@ -1,0 +1,28 @@
+{
+  "name": "spacin_front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ruby -run -e httpd . -p5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LPayyapilli/spacin_front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LPayyapilli/spacin_front/issues"
+  },
+  "homepage": "https://github.com/LPayyapilli/spacin_front#readme",
+  "dependencies": {
+    "angular": "^1.4.2",
+    "angular-route": "^1.4.2"
+  },
+  "devDependencies": {
+    "angular": "^1.4.2",
+    "angular-route": "^1.4.2"
+  }
+}
