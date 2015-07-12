@@ -7,7 +7,9 @@
       var url = appSettings.url + '/auth/login';
       return $http.post(url, data).success(function(res) {
         // $location.path('/user');
-        console.log(res);
+        console.log('res', res);
+      }).error(function(err) {
+        console.log(err);
       });
     };
 

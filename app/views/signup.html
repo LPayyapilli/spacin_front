@@ -1,0 +1,16 @@
+<div>
+  <form name="signupForm">
+    <input type="text" name="username" ng-model="signupCtrl.signup.username" placeholder="username"/>
+    <br>
+    <input type="text" name="firstname" ng-model="signupCtrl.signup.firstname" placeholder="first name"/>
+    <br>
+    <input type="text" name="lastname" ng-model="signupCtrl.signup.lastname" placeholder="last name"/>
+    <br>
+    <input type="text" name="email" ng-model="signupCtrl.signup.email" placeholder="email"/>
+    <br>
+    <input type="number" name="zip" ng-model="signupCtrl.signup.zip" placeholder="zip code"/>
+    <br>
+    <input type="password" name="password" ng-model="signupCtrl.signup.password" placeholder="password"/>
+    <button type='submit' ng-click="signupCtrl.postSignup()">Sign Up</button>
+  </form>
+</div>

@@ -7,15 +7,32 @@
     factory.user = {};
 
     factory.getUsers = function() {
+      var url = appSettings.url + '/users';
       // allow access to the list of users
-      return $http.get('/users').success(function(response){
-        angulr.copy(response, factory.users);
-      });
+      return $http.get(url).success(function(response) {
+        if(res.message === "unAuthenticated") {
+          $location.path('/');
+        } else {
+        angular.copy(response, factory.users);
+      }
+    }).error(function(err) {
+      console.log(err);
+      $location.path('/');
+    });
+
     };
 
     factory.getUser = function(userId){
-      return  $http.get('/users/' + userId).sucess(function(response)
-        angular.copy(response, factory.user);
+      var url = appSettings.url + '/users';
+      return  $http.get(url + userId).sucess(function(response) {
+        if (res.message === "unAuthenticated") {
+          $location.path('/');
+        } else {
+          angular.copy(response, factory.user);
+        }
+      }).error(function(err) {
+        console.log(err);
+        $location.path('/');
       });
     };
     return factory;
@@ -23,5 +40,5 @@
 
   usersFactory.$inject = ['$http'];
 
-  angular.module('usersApp').factory('usersFactory', usersFactory);
+  angular.module('spacin').factory('usersFactory', usersFactory);
 })();

@@ -10,13 +10,13 @@
               templateUrl: 'app/views/login.html'
             }
            )
-      // .when('/signup',
-      //       {
-      //         controller: 'signupController',
-      //         controllerAs: 'signupCtrl',
-      //         templateUrl: 'app/views/signup.html'
-      //       }
-      //      )
+      .when('/signup',
+            {
+              controller: 'signupController',
+              controllerAs: 'signupCtrl',
+              templateUrl: 'app/views/signup.html'
+            }
+           )
       // .when('/user',
       //       {
       //         controller:'userController',
