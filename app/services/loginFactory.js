@@ -6,8 +6,7 @@
     factory.postLogin = function(data) {
       var url = appSettings.url + '/auth/login';
       return $http.post(url, data).success(function(res) {
-        // $location.path('/user');
-        console.log('res', res);
+        $location.path('/user');
       }).error(function(err) {
         console.log(err);
       });

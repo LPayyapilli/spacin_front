@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col=xs-12">
+      <div class="welcome">
+        <h1> Welcome {{userCtrl.user.username}}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="rentdiv" ng-click="userCtrl.showSpaces()">
+      <h1> Rent </h1>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="hostdiv">
+        <form name="newSpace">
+          <input name="spacename" ng-model="userCtrl.newSpace.name" placeholder="Name"/>
+          <input name="spacecaption" ng-model="userCtrl.newSpace.caption" placeholder="caption"/>
+          <br/>
+          <input name="space_address_num" ng-model="userCtrl.newSpace.address.number" placeholder="Street Number"/>
+          <input name="space_address_street" ng-model="userCtrl.newSpace.address.street" placeholder="Street Name"/>
+          <input name="space_address_state" ng-model="userCtrl.newSpace.address.state" placeholder="State"/>
+          <input name="space_address_zip" ng-model="userCtrl.newSpace.address.zip" placeholder="Zip Code"/>
+          <br/>
+          <input name="space_category" ng-model="userCtrl.newSpace.category" type="radio" value="Bar"> Bar </input>
+          <input name="space_category" ng-model="userCtrl.newSpace.category" type="radio" value="Cafe"> Cafe </input>
+          <input name="space_category" ng-model="userCtrl.newSpace.category" type="radio" value="Work/Office"> Work/Office </input>
+          <input name="space_category" ng-model="userCtrl.newSpace.category" type="radio" value="Home/Residential"> Home/Residential</input>
+
+          <button type="submit" name="spaceupload" ng-click="userCtrl.hostSpace()"> <h1> Host </h1> </button>
+        </form>
+        <form method="POST" acton="appSettings"></form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

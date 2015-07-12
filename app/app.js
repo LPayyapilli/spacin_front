@@ -17,12 +17,13 @@
               templateUrl: 'app/views/signup.html'
             }
            )
-      // .when('/user',
-      //       {
-      //         controller:'userController',
-      //         controllerAs: 'userCtrl',
-      //         templateUrl: 'app/views/user.html'
-      //       }
+      .when('/user',
+            {
+              controller:'userController',
+              controllerAs: 'userCtrl',
+              templateUrl: 'app/views/user.html'
+            }
+            )
       // .when('/locations',
       //       {
       //         controller:'locationController',
