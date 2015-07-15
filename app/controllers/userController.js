@@ -11,6 +11,15 @@
     this.hostSpace = function() {
       spaceFactory.createSpace(this.newSpace);
     }
+    this.getSpaces = function() {
+      spaceFactory.getSpaces(this.user);
+    }
+    this.host = function () {
+      spaceFactory.showHost();
+    }
+    this.rent = function() {
+      spaceFactory.showRent();
+    }
 
     function init() {
       userFactory.getUser();
@@ -30,8 +39,12 @@
   //   spaceFactory.show();
   // }
 
+  /////////////////Dependency Injections///////////////////
+  /////////////////////////////////////////////////////////
   userController.$inject = ['userFactory', 'spaceFactory'];
 
+  /////////////////Exporting Module////////////////////////
+  /////////////////////////////////////////////////////////
   angular.module('spacin').controller('userController', userController);
 
 })();

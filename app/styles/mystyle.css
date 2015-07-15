@@ -1,0 +1,36 @@
+.container, .row{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#welcome {
+  height: 33vh;
+  background-color: red;
+}
+#hostdiv {
+  height: 66vh;
+  background-color: rgba(229, 248, 210, .7);
+}
+#rentdiv{
+  margin: 0;
+  padding: 0;
+  height: 66vh;
+  background-color: rgba(34, 84, 220, .7)
+}
+.col-xs-6 {
+  margin: 0;
+  padding: 0;
+}
+
+
+.rent {
+  margin: 0;
+
+}
+
+.displayNone {
+  display: none;
+}
+.displayInline {
+  display: inline;
+}

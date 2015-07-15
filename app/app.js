@@ -24,14 +24,14 @@
               templateUrl: 'app/views/user.html'
             }
             )
-      // .when('/locations',
-      //       {
-      //         controller:'locationController',
-      //         controllerAs: 'locationCtrl',
-      //         templateUrl: 'app/views/location.html'
-      //       }
-      //      )
-      .otherwise({redirectTo: '/'});
+      .when('/spaces',
+            {
+              controller:'spaceController',
+              controllerAs: 'spaceCtrl',
+              templateUrl: 'app/views/space.html'
+            }
+           )
+      // .otherwise({redirectTo: '/'});
   }).config(['$httpProvider', function($httpProvider){
     $httpProvider.defaults.withCredentials = true;
   }]);
