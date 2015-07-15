@@ -15,35 +15,34 @@
     factory.createSpace = function(newSpace) {
       console.log(newSpace);
       var url = appSettings.url + '/space/new'
-      return $http.post(url).success(function(res) {
+      return $http.post(url, newSpace).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
-          console.log(response);
-          angular.copy(response, factory.space);
+          console.log(res);
+          angular.copy(res, factory.space);
           $location.path('/user');
         }
       }).error(function(err) {
+        console.log("this is an error");
         console.log(err);
-        $location.path('/');
       });
     };
 
     /////////////////Get All Spaces//////////////////////////
     /////////////////////////////////////////////////////////
-    factory.getSpaces = function () {
+    factory.getSpaces = function() {
       var url = appSettings.url + '/space/all'
         console.log(url);
-      return  $http.get(url).success(function(response) {
+      return  $http.get(url).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
-          angular.copy(response, factory.spaces);
-          console.log(response);
+          angular.copy(res, factory.spaces);
         }
       }).error(function(err) {
         console.log(err);
-        $location.path('/');
+        // $location.path('/');
       });
     };
 

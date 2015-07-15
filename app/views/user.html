@@ -19,7 +19,7 @@
       <div class="host" ng-class="spaceCtrl.host()">
        <h1 class="rent" ng-click="userCtrl.host()"> Host </h1>
       </div>
-      <div class="hostdiv displayNone" id="hostdiv" ng-class="spaceCtrl.hostDiv()">
+      <div class="hostdiv" id="hostdiv" ng-class="spaceCtrl.hostDiv()">
         <div class="spaceinfo">
           <form name="newSpace">
             <input name="spacename" ng-model="userCtrl.newSpace.name" placeholder="Name"/>
@@ -34,16 +34,23 @@
             <br>
             <input name="space_address_zip" ng-model="userCtrl.newSpace.address.zip" placeholder="Zip Code"/>
             <br>
-
-            <input name="space_category" ng-model="userCtrl.newSpace.category" type="radio" value="Bar">Bar </input>
-            <input name="space_category" ng-model="userCtrl.newSpace.category" type="radio" value="Cafe">Cafe</input>
-            <input name="space_category" ng-model="userCtrl.newSpace.category" type="radio" value="Work/Office">Work/Office</input>
-            <input name="space_category" ng-model="userCtrl.newSpace.category" type="radio" value="Home/Residential">Home/Residential</input>
+            <input name="space_category1" ng-model="userCtrl.newSpace.category" type="radio" value="Bar">Bar
             <br>
-            <button type="submit" name="spaceupload" ng-click="userCtrl.hostSpace()"> <h5>Add Space</h5> </button>
+            <input name="space_category2" ng-model="userCtrl.newSpace.category" type="radio" value="Cafe">Cafe
+            <br>
+            <input name="space_category3" ng-model="userCtrl.newSpace.category" type="radio" value="Work/Office">Work/Office
+            <br>
+            <input name="space_category4" ng-model="userCtrl.newSpace.category" type="radio" value="Home/Residential">Home/Residential
+            <br>
+              <div s3-upload bucket="'clarkedbteer'" ng-model="userCtrl.newSpace.src"
+            s3-upload-options="{getOptionsUri: 'http://localhost:3000/space/s3access'}">
+              </div>
+            <button ng-show="userCtrl.newSpace.src" type="button" name="spaceupload" ng-click="userCtrl.hostSpace()"> <h5>Add Space</h5> </button>
+            <br/>
+              </div>
           </form>
-          <form method="POST" acton="appSettings"></form>
         </div>
+
       </div>
 
     </div>

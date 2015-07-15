@@ -1,0 +1,20 @@
+{
+  "name": "spacin_front",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LPayyapilli/spacin_front",
+  "authors": [
+    "LPayyapilli <luke.payyapilli@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-s3upload": "~0.1.2",
+    "ngSanitize": "~0.0.2"
+  }
+}

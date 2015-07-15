@@ -34,9 +34,9 @@
   // this.showMessages = function() {
   //   messageFactory.getMessages();
   // }
-  // this.getspaces = function() {
-  //   spacesFactory.getspaces();
-  // }
+  this.getSpaces = function() {
+    spacesFactory.getSpaces();
+  }
   // this.postSpace = function() {
   //   spaceFactory.show();
   // }
