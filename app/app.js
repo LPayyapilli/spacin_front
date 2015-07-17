@@ -24,10 +24,10 @@
               templateUrl: 'app/views/user.html'
             }
             )
-      .when('/spaces',
+      .when('/space',
             {
-              controller:'spaceController',
-              controllerAs: 'spaceCtrl',
+              controller:'userController',
+              controllerAs: 'userCtrl',
               templateUrl: 'app/views/space.html'
             }
            )

@@ -1,9 +1,48 @@
-<div class="container">
-  <div class="row" id="welcome">
-    <div class="col=xs-12">
-      <div class="welcome">
-        <h1> Welcome {{userCtrl.user.username}}</h1>
+<nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;z-index: 1000;">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="#/" >Spacin</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/#/user">Account</a></li>
+      <li><a href="/#/host">Post a Space</a></li>
+      <li><a href="/#/search">Rent a Space</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container" style="margin:0;">
+  <div class="row">
+    <div class="col-xs-3" style="padding:0;">
+      <div class="rentdiv" ng-controller="userController as userCtrl" id="rentdiv" style="height:110vh; margin:0;">
+      <h1 class="rent"> {{userCtrl.user.username}} </h1>
+        <div>
+        <img ng-src="{{userCtrl.user.profilePicture}}" style="width: 200px; height: 200px; border-radius: 100px;margin-bottom: 50px;margin-top: 25px; margin-left: 25px; z-index:1000;"/>
+        </div>
+        <div style="background-color: rgba(230, 230, 230, .8);">
+          <ul>
+            <a class="hello" href="/#/user">My Messages</a>
+            <br>
+            <a class="hello" href="/#/account">Account Settings</a>
+            <br>
+            <a class="hello" href="/#/background">Change Background</a>
+            <br>
+            <a class="hello" href="/#/space">Manage Spaces</a>
+            <br>
+            <a class="hello" href="/#/">Sign Out</a>
+          </ul>
+        </div>
       </div>
+    </div>
+    <div class="col-xs-9" style="padding:0;">
+    <!-- <img ng-src="{{userCtrl.user.backgroundPicture}}" style="height:110vh; padding:0; margin: 0;"/> -->
     </div>
   </div>
 </div>
