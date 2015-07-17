@@ -7,8 +7,6 @@
     var factory = {};
     factory.spaces = [];
     factory.space = {};
-    factory.displayHost = "displayInline";
-    factory.displayHostDiv = "displayNone";
 
     /////////////////Create a New Space//////////////////////
     /////////////////////////////////////////////////////////
@@ -21,7 +19,7 @@
         } else {
           console.log(res);
           angular.copy(res, factory.space);
-          $location.path('/user');
+          $location.path('/host');
         }
       }).error(function(err) {
         console.log("this is an error");
@@ -46,15 +44,18 @@
       });
     };
 
-    /////////////////Showing/Hiding Host Div/////////////////
-    /////////////////////////////////////////////////////////
-    factory.showHost = function() {
-      factory.displayHost = "displayNone";
-      factory.displayHostDiv = "displayInline";
-    }
-    factory.showRent = function() {
-      $location.path('/space');
-    }
+    factory.seachZip = function(query) {
+      var url = appSettings.url + '/space/search'
+      console.log(url);
+      var data = {zip: query};
+      console.log(data);
+      return $http.post(url, data).success(function(res) {
+        console.log(res);
+        angular.copy(res, factory.spaces);
+      }).error(function(err) {
+        console.log(err);
+      });
+    };
 
     return factory;
   };

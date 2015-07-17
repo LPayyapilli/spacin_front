@@ -1,0 +1,43 @@
+
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <ul class="nav navbar-nav">
+      <li>
+      <a href="#">Spacin</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/#/user">Account</a></li>
+      <li><a href="/#/host">Post a Space</a></li>
+      <li><a href="/#/search">Rent a Space</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search by Zip" ng-model="spaceCtrl.searchQuery">
+        <span class="input-group-btn">
+          <button class="btn btn-small" style="margin-left:10px;" ng-click="spaceCtrl.search()">Go!</button>
+        </span>
+      </div><!-- /input-group -->
+      <div ng-repeat="space in spaceCtrl.spaces">
+      <br>
+      {{space.name}}
+      <div ng-repeat="picture in space.pictures">
+      <img ng-src="{{picture.src}}" style="height:75px;width:75px;"/>
+      {{space.zip}}
+
+
+      </div>
+    </div>
+  </div>
+</div><!-- /.col-lg-6 -->
+

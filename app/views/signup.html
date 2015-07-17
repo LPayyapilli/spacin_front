@@ -1,16 +1,26 @@
-<div>
-  <form name="signupForm">
-    <input type="text" name="username" ng-model="signupCtrl.signup.username" placeholder="username"/>
-    <br>
-    <input type="text" name="firstname" ng-model="signupCtrl.signup.firstname" placeholder="first name"/>
-    <br>
-    <input type="text" name="lastname" ng-model="signupCtrl.signup.lastname" placeholder="last name"/>
-    <br>
-    <input type="text" name="email" ng-model="signupCtrl.signup.email" placeholder="email"/>
-    <br>
-    <input type="number" name="zip" ng-model="signupCtrl.signup.zip" placeholder="zip code"/>
-    <br>
-    <input type="password" name="password" ng-model="signupCtrl.signup.password" placeholder="password"/>
-    <button type='submit' ng-click="signupCtrl.postSignup()">Sign Up</button>
-  </form>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h1> Registration </h1>
+          <form name="signupForm">
+            <input type="text" name="username" ng-model="signupCtrl.signup.username" placeholder="Username"/>
+            <br>
+            <input type="text" name="firstname" ng-model="signupCtrl.signup.firstname" placeholder="First Name"/>
+            <br>
+            <input type="text" name="lastname" ng-model="signupCtrl.signup.lastname" placeholder="Last Name"/>
+            <br>
+            <input type="text" name="email" ng-model="signupCtrl.signup.email" placeholder="Email"/>
+            <br>
+            <input type="password" name="password" ng-model="signupCtrl.signup.password" placeholder="Password"/>
+            <br>
+            <input type="number" name="zippy" ng-model="signupCtrl.signup.zip" placeholder="Zip Code"/>
+            <br>
+            <br>
+            <button type='submit' ng-click="signupCtrl.postSignup()">Sign Up</button>
+          </form>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <img class="hello" src="https://static.pexels.com/photos/4641/iphone-smartphone-taking-photo-graffiti.jpg" style="width:550px;height:500px;margin-top:70px;"/>
+        </div>
+    </div>
 </div>

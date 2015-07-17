@@ -5,42 +5,40 @@
     /////////////////////////////////////////////////////////
     this.space = spaceFactory.space;
     this.newSpace = {};
+    this.spaces = spaceFactory.spaces;
+    this.searchQuery = "";
+    this.newSpace = {};
 
     /////////////////Show Space Function/////////////////////
     /////////////////////////////////////////////////////////
     this.showSpaces = function() {
       console.log('hello');
       spaceFactory.showSpaces();
-    }
-    /////////////////Show Host Function//////////////////////
-    /////////////////////////////////////////////////////////
-    this.host = function() {
-      return spaceFactory.displayHost;
-    }
-    /////////////////Show HostDiv Function///////////////////
-    /////////////////////////////////////////////////////////
-    this.hostDiv = function() {
-      return spaceFactory.displayHostDiv;
-    }
+    };
 
-    // function init() {
-    //   spaceFactory.getspace();
+    function init() {
+      spaceFactory.getSpaces();
 
-    // }
-    // init();
-     }
+    };
+
+    init();
+
 
 
   // this.showMessages = function() {
   //   messageFactory.getMessages();
   // }
-  this.getSpaces = function() {
-    spacesFactory.getSpaces();
-  }
-  // this.postSpace = function() {
-  //   spaceFactory.show();
-  // }
-
+  // this.getSpaces = function() {
+  //   spacesFactory.getSpaces();
+  // };
+  this.hostSpace = function() {
+      spaceFactory.createSpace(this.newSpace);
+    }
+  this.search = function() {
+    console.log("yo");
+    spaceFactory.seachZip(this.searchQuery);
+  };
+};
   /////////////////Dependency Injections///////////////////
   /////////////////////////////////////////////////////////
   spaceController.$inject = ['$http', '$location', 'userFactory', 'spaceFactory'];

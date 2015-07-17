@@ -1,11 +1,3 @@
-.container, .row{
-  padding: 0;
-
-}
-#welcome {
-  height: 33vh;
-  background-color: red;
-}
 #hostdiv {
   height: 66vh;
   background-color: rgba(229, 248, 210, .7);
@@ -23,13 +15,5 @@
 
 .rent {
   margin: 0;
-
-}
-
-.displayNone {
-  display: none;
-}
-.displayInline {
-  display: block;
 }
 

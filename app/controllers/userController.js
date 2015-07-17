@@ -2,14 +2,12 @@
 
   var userController = function(userFactory, spaceFactory) {
     this.user = userFactory.user;
-    this.newSpace = {};
+    this.newprofilePicture = undefined;
+    this.newbackgroundPicture = undefined;
+
 
     this.showSpaces = function() {
-      console.log('hello');
       spaceFactory.showSpaces();
-    }
-    this.hostSpace = function() {
-      spaceFactory.createSpace(this.newSpace);
     }
     this.getSpaces = function() {
       spaceFactory.getSpaces(this.user);
@@ -19,6 +17,12 @@
     }
     this.rent = function() {
       spaceFactory.showRent();
+    }
+    this.profilePicture = function() {
+      userFactory.newProfPic(this.newprofilePicture);
+    }
+    this.backgroundPicture = function() {
+      userFactory.newBackPic(this.newbackgroundPicture);
     }
 
     function init() {

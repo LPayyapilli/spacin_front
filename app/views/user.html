@@ -1,61 +1,41 @@
-<div class="container">
-  <div class="row" id="welcome">
-    <div class="col=xs-12">
-      <div class="welcome">
-        <h1> Welcome {{userCtrl.user.username}}</h1>
-        <button type="submit" name="spaceget" ng-click="userCtrl.getSpaces()"> <h5>Get Spaces</h5> </button>
-      </div>
-    </div>
+<nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;z-index: 1000;">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="#" >Spacin</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/#/user">Account</a></li>
+      <li><a href="/#/host">Post a Space</a></li>
+      <li><a href="/#/search">Rent a Space</a></li>
+    </ul>
   </div>
-
+</nav>
+<div class="container" style="margin:0;">
+  <!-- <img ng-src="{{userCtrl.user.backgroundPicture}}" style="width:100%;"/> -->
   <div class="row">
-    <div class="col-xs-6">
-      <div class="rentdiv" id="rentdiv"  ng-click="userCtrl.showSpaces()">
-      <h1 class="rent"> Rent </h1>
-      </div>
-    </div>
-
-    <div class="col-xs-6" ng-controller="spaceController as spaceCtrl">
-      <div class="host" ng-class="spaceCtrl.host()">
-       <h1 class="rent" ng-click="userCtrl.host()"> Host </h1>
-      </div>
-      <div class="hostdiv" id="hostdiv" ng-class="spaceCtrl.hostDiv()">
-        <div class="spaceinfo">
-          <form name="newSpace">
-            <input name="spacename" ng-model="userCtrl.newSpace.name" placeholder="Name"/>
-            <br>
-            <input name="spacecaption" ng-model="userCtrl.newSpace.caption" placeholder="Caption"/>
-            <br>
-            <input name="space_address_num" ng-model="userCtrl.newSpace.address.number" placeholder="Street Number"/>
-            <br>
-            <input name="space_address_street" ng-model="userCtrl.newSpace.address.street" placeholder="Street Name"/>
-            <br>
-            <input name="space_address_state" ng-model="userCtrl.newSpace.address.state" placeholder="State"/>
-            <br>
-            <input name="space_address_zip" ng-model="userCtrl.newSpace.address.zip" placeholder="Zip Code"/>
-            <br>
-            <input name="space_category1" ng-model="userCtrl.newSpace.category" type="radio" value="Bar">Bar
-            <br>
-            <input name="space_category2" ng-model="userCtrl.newSpace.category" type="radio" value="Cafe">Cafe
-            <br>
-            <input name="space_category3" ng-model="userCtrl.newSpace.category" type="radio" value="Work/Office">Work/Office
-            <br>
-            <input name="space_category4" ng-model="userCtrl.newSpace.category" type="radio" value="Home/Residential">Home/Residential
-            <br>
-              <div s3-upload bucket="'clarkedbteer'" ng-model="userCtrl.newSpace.src"
-            s3-upload-options="{getOptionsUri: 'http://localhost:3000/space/s3access'}">
-              </div>
-            <button ng-show="userCtrl.newSpace.src" type="button" name="spaceupload" ng-click="userCtrl.hostSpace()"> <h5>Add Space</h5> </button>
-            <br/>
-              </div>
-          </form>
+    <div class="col-xs-3" style="padding:0;">
+      <div class="rentdiv" ng-controller="userController as userCtrl" id="rentdiv" style="height:100vh; width:250px; position: fixed right;">
+      <h1 class="rent"> {{userCtrl.user.username}} </h1>
+        <div>
+        <img ng-src="{{userCtrl.user.profilePicture}}" style="width: 200px; height: 200px; border-radius: 100px;margin-bottom: 50px;margin-top: 25px; margin-left: 25px; z-index:1000;"/>
         </div>
-
+        <div>
+          <ul>
+            <a class="hello" href="/#/user">My Messages</a>
+            <a class="hello" href="/#/account">Account Settings</a>
+            <a class="hello" href="/#/background">Change Background</a>
+          </ul>
+        </div>
       </div>
-
     </div>
-
   </div>
-
 </div>
 

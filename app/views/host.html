@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <ul class="nav navbar-nav">
+      <li>
+      <a href="#">Spacin</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/#/user">Account</a></li>
+      <li><a href="/#/host">Post a Space</a></li>
+      <li><a href="/#/search">Rent a Space</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="spaceinfo">
+                <form name="newSpace" style="margin-top:50px;">
+                    <input name="spacename" ng-model="spaceCtrl.newSpace.name" placeholder="Name"/>
+                    <br>
+                    <br>
+                    <input name="spacecaption" ng-model="spaceCtrl.newSpace.caption" placeholder="Caption"/>
+                    <br>
+                    <br>
+                    <input name="space_address_num" ng-model="spaceCtrl.newSpace.address.number" placeholder="Street Number"/>
+                    <br>
+                    <br>
+                    <input name="space_address_street" ng-model="spaceCtrl.newSpace.address.street" placeholder="Street Name"/>
+                    <br>
+                    <br>
+                    <input name="space_address_state" ng-model="spaceCtrl.newSpace.address.state" placeholder="State"/>
+                    <br>
+                    <br>
+                    <input name="space_address_zip" ng-model="spaceCtrl.newSpace.address.zip" placeholder="Zip Code"/>
+                    <br>
+                    <br>
+                    <input name="space_category1" ng-model="spaceCtrl.newSpace.category" type="radio" value="Bar"> Bar
+                    <br>
+                    <br>
+                    <input name="space_category2" ng-model="spaceCtrl.newSpace.category" type="radio" value="Cafe"> Cafe
+                    <br>
+                    <br>
+                    <input name="space_category3" ng-model="spaceCtrl.newSpace.category" type="radio" value="Work/Office"> Work/Office
+                    <br>
+                    <br>
+                    <input name="space_category4" ng-model="spaceCtrl.newSpace.category" type="radio" value="Home/Residential"> Home/Residential
+                    <br>
+                    <br>
+                    <div s3-upload bucket="'clarkedbteer'" ng-model="spaceCtrl.newSpace.src"
+                    s3-upload-options="{getOptionsUri: 'http://localhost:3000/space/s3access'}">
+                    </div>
+                    <div>
+                    <button ng-show="spaceCtrl.newSpace.src" type="button" name="spaceupload" ng-click="spaceCtrl.hostSpace()"> <h5>Add Space</h5> </button>
+                    <br/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <img src="{{spaceCtrl.newSpace.src}}" style="width:550px;height:500px;"/>
+        </div>
+    </div>
+</div>
+
+
