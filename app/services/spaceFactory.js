@@ -12,7 +12,7 @@
     /////////////////////////////////////////////////////////
     factory.createSpace = function(newSpace) {
       console.log(newSpace);
-      var url = appSettings.url + '/space/new'
+      var url = appSettings.url + '/spacin_front/space/new'
       return $http.post(url, newSpace).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
@@ -30,7 +30,7 @@
     /////////////////Get All Spaces//////////////////////////
     /////////////////////////////////////////////////////////
     factory.getSpaces = function() {
-      var url = appSettings.url + '/space/all'
+      var url = appSettings.url + '/spacin_front/space/all'
         console.log(url);
       return  $http.get(url).success(function(res) {
         if (res.message === "unAuthenticated") {
@@ -45,7 +45,7 @@
     };
 
     factory.seachZip = function(query) {
-      var url = appSettings.url + '/space/search'
+      var url = appSettings.url + '/spacin_front/space/search'
       console.log(url);
       var data = {zip: query};
       console.log(data);

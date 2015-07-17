@@ -46,7 +46,7 @@
 
     factory.newProfPic = function(newprofilePicture) {
       var data = {pic:newprofilePicture};
-      var url = appSettings.url + '/user/newProfPic'
+      var url = appSettings.url + '/spacin_front/user/newProfPic'
       return $http.post(url, data).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
@@ -63,7 +63,7 @@
 
     factory.newBackPic = function(newbackgroundPicture) {
       var data = {pic:newbackgroundPicture};
-      var url = appSettings.url + '/user/newBackPic'
+      var url = appSettings.url + '/spacin_front/user/newBackPic'
       return $http.post(url, data).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
