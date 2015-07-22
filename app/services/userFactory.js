@@ -46,7 +46,7 @@
 
     factory.newProfPic = function(newprofilePicture) {
       var data = {pic:newprofilePicture};
-      var url = appSettings.url + '/spacin_front/user/newProfPic'
+      var url = appSettings.url + '/user/newProfPic'
       return $http.post(url, data).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
