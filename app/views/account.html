@@ -24,7 +24,7 @@
             <div class="addprof">
                 <form name="profPic" style="margin-top:50px;">
                     <div s3-upload bucket="'clarkedbteer'" ng-model="userCtrl.newprofilePicture"
-                    s3-upload-options="{getOptionsUri: 'http://localhost:3000/space/s3access'}">
+                    s3-upload-options="{getOptionsUri: 'http://spacin.herokuapp.com/space/s3access'}">
                     </div>
                     <div>
                     <button ng-show="userCtrl.newprofilePicture" type="button" name="profpicupload" ng-click="userCtrl.profilePicture()"> <h5>Make Prof Pic</h5> </button>
