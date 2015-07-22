@@ -63,7 +63,7 @@
 
     factory.newBackPic = function(newbackgroundPicture) {
       var data = {pic:newbackgroundPicture};
-      var url = appSettings.url + '/spacin_front/user/newBackPic'
+      var url = appSettings.url + '/user/newBackPic'
       return $http.post(url, data).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
