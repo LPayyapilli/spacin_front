@@ -41,8 +41,8 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-9" style="padding:0;" ng-controller="spaceController as spaceCtrl">
-      <div ng-repeat="space in spaceCtrl.spaces">
+    <div class="col-xs-9" style="padding:0;">
+      <div ng-repeat="space in spaceCtrl.spaces" ng-controller="spaceController as spaceCtrl">
       <br>
       {{space.name}}
       <div ng-repeat="picture in space.pictures">
