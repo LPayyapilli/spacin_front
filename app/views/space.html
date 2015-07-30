@@ -41,8 +41,11 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-9" style="padding:0;">
-    <!-- <img ng-src="{{userCtrl.user.backgroundPicture}}" style="height:110vh; padding:0; margin: 0;"/> -->
-    </div>
+    <div ng-repeat="space in spaceCtrl.spaces">
+      <br>
+      {{space.name}}
+      <div ng-repeat="picture in space.pictures">
+      <img ng-src="{{picture.src}}" style="height:75px;width:75px;"/>
+      {{space.zip}}
   </div>
 </div>
