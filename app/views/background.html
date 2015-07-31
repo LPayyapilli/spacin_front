@@ -24,7 +24,7 @@
             <div class="addprof">
                 <form name="backPic" style="margin-top:50px;">
                     <div s3-upload bucket="'clarkedbteer'" ng-model="userCtrl.newbackgroundPicture"
-                    s3-upload-options="{getOptionsUri: 'http://spacin.herokuapp.com/spacin_front/space/s3access'}">
+                    s3-upload-options="{getOptionsUri: 'http://spacin.herokuapp.com/space/s3access'}">
                     </div>
                     <div>
                     <button ng-show="userCtrl.newbackgroundPicture" type="button" name="backpicupload" ng-click="userCtrl.backgroundPicture()"> <h5>Make Background Pic</h5> </button>
