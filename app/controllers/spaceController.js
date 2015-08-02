@@ -20,11 +20,13 @@
 
   this.hostSpace = function() {
       spaceFactory.createSpace(this.newSpace);
-    }
-  this.search = function() {
-    console.log("yo");
-    spaceFactory.searchUser(this.searchQuery);
   };
+  this.search = function() {
+    spaceFactory.searchZip(this.searchQuery);
+  };
+  this.findOne = function() {
+    spaceFactory.findOne(this.space);
+  }
 };
   /////////////////Dependency Injections///////////////////
   /////////////////////////////////////////////////////////

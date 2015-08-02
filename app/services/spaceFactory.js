@@ -44,6 +44,24 @@
       });
     };
 
+    /////////////////Get One Space//////////////////////////
+    /////////////////////////////////////////////////////////
+    factory.findOne = function() {
+      var url = appSettings.url + '/space/_id'
+        console.log(url);
+      return  $http.get(url).success(function(res) {
+        if (res.message === "unAuthenticated") {
+          $location.path('/');
+        } else {
+          angular.copy(res, factory.space);
+        }
+      }).error(function(err) {
+        console.log(err);
+        // $location.path('/');
+      });
+    };
+
+
 
     factory.searchZip = function(query) {
       var url = appSettings.url + '/space/search'
