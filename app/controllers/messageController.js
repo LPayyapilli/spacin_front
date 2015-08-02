@@ -16,7 +16,7 @@
     };
 
     function init() {
-      messageFactory.getmessages();
+      messageFactory.getMessages();
 
     };
 
