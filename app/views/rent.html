@@ -46,10 +46,14 @@
               <br>
               <br>
               <div>
-                <button type="button" name="messageSave" ng-click="messageCtrl.hostMessage()"> <h5>Send</h5> </button>
+                <button type="button" name="messageSave" ng-click="messageCtrl.hostMessage()"> <h5>Send Message to Owner</h5> </button>
               <br/>
               </div>
           </form>
+          <div ng-repeat="message in messageCtrl.messages">
+          <br>
+          {{message.title}}
+          </div>
         </div>
       </div>
     </div>

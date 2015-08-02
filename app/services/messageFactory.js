@@ -8,6 +8,7 @@
     factory.messages = [];
     factory.message = {};
 
+
     /////////////////Create a New Message//////////////////////
     /////////////////////////////////////////////////////////
     factory.createMessage = function(newmessage) {

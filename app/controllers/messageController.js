@@ -11,16 +11,12 @@
 
     /////////////////Show message Function///////////////////
     /////////////////////////////////////////////////////////
-    this.showMessages = function() {
-      messageFactory.showMessages();
-    };
+    // function init() {
+    //   messageFactory.getMessages();
 
-    function init() {
-      messageFactory.getMessages();
+    // };
 
-    };
-
-    init();
+    // init();
 
   this.hostMessage = function() {
       messageFactory.createMessage(this.newMessage);
