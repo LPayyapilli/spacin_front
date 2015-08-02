@@ -9,7 +9,7 @@
     this.searchQuery = "";
     this.newSpace = {};
 
-    /////////////////Show Space Function/////////////////////
+    /////////////////Show Spaces Function/////////////////////
     /////////////////////////////////////////////////////////
     function init() {
       spaceFactory.getSpaces();
@@ -26,6 +26,9 @@
   };
   this.findOne = function() {
     spaceFactory.findOne(this.space);
+  };
+  this.getUserSpaces = function() {
+    spaceFactory.getUserSpaces();
   }
 };
   /////////////////Dependency Injections///////////////////

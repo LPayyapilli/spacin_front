@@ -40,7 +40,24 @@
         }
       }).error(function(err) {
         console.log(err);
-        // $location.path('/');
+         $location.path('/');
+      });
+    };
+
+    /////////////////Get All Spaces from a User//////////////
+    /////////////////////////////////////////////////////////
+    factory.getUserSpaces = function() {
+      var url = appSettings.url + '/space/user/all'
+        console.log(url);
+      return  $http.get(url).success(function(res) {
+        if (res.message === "unAuthenticated") {
+          $location.path('/');
+        } else {
+          angular.copy(res, factory.spaces);
+        }
+      }).error(function(err) {
+        console.log(err);
+         $location.path('/');
       });
     };
 
@@ -57,19 +74,14 @@
         }
       }).error(function(err) {
         console.log(err);
-        // $location.path('/');
+         $location.path('/');
       });
     };
 
-
-
     factory.searchZip = function(query) {
       var url = appSettings.url + '/space/search'
-      console.log(url);
       var data = {zip: query};
-      console.log(data);
       return $http.post(url, data).success(function(res) {
-        console.log(res);
         angular.copy(res, factory.spaces);
       }).error(function(err) {
         console.log(err);

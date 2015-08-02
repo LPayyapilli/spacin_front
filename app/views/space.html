@@ -19,36 +19,22 @@
     </ul>
   </div>
 </nav>
-<div class="container" style="margin:0;">
+<div class="container">
   <div class="row">
-    <div class="col-xs-3" style="padding:0;">
-      <div class="rentdiv" ng-controller="userController as userCtrl" id="rentdiv" style="height:110vh; margin:0;">
-      <h1 class="rent"> {{userCtrl.user.username}} </h1>
-        <div>
-        <img ng-src="{{userCtrl.user.profilePicture}}" style="width: 200px; height: 200px; border-radius: 100px;margin-bottom: 50px;margin-top: 25px; margin-left: 25px; z-index:1000;"/>
-        </div>
-        <div style="background-color: rgba(230, 230, 230, .8);">
-          <ul>
-            <br>
-            <a class="hello" href="/#/account">Account Settings</a>
-            <br>
-            <a class="hello" href="/#/background">Change Background</a>
-            <br>
-            <a class="hello" href="/#/space">Manage Spaces</a>
-            <br>
-            <a class="hello" href="/#/">Sign Out</a>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-9" style="padding:0;">
-      <div ng-repeat="space in spaceCtrl.spaces" ng-controller="spaceController as spaceCtrl">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search by Zip" ng-model="spaceCtrl.searchQuery">
+        <span class="input-group-btn">
+          <button class="btn btn-small" style="margin-left:10px;" ng-click="spaceCtrl.search()">Go!</button>
+        </span>
+      </div><!-- /input-group -->
+      <div ng-repeat="space in spaceCtrl.spaces">
       <br>
       {{space.name}}
-      <div ng-repeat="picture in space.pictures">
-      <img ng-src="{{picture.src}}" style="height:75px;width:75px;"/>
-      {{space.zip}}
-      </div>
+        <div ng-repeat="picture in space.pictures">
+          <img ng-src="{{picture.src}}" style="height:75px;width:75px;"/>
+          {{space.zip}}
       </div>
     </div>
+  </div>
 </div>
