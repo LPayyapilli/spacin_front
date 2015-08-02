@@ -37,7 +37,7 @@
           {{space.zip}}
           <br>
           <p> Owner: {{space._creator}} </p>
-        <div class="messageinfo">
+        <div class="messageinfo" ng-controller="messageCtrl">
           <form name="newMessage" style="margin-top:50px;">
                 <input name="messageTitle" ng-model="messageCtrl.newMessage.title" placeholder="title"/>
               <br>
