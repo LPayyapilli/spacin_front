@@ -9,11 +9,11 @@
     factory.message = {};
 
 
-    /////////////////Create a New Message//////////////////////
+    /////////////////Create a New Message////////////////////
     /////////////////////////////////////////////////////////
-    factory.createMessage = function(newmessage) {
+    factory.createMessage = function(newMessage) {
       console.log(newMessage);
-      var url = appSettings.url + '/message/new'
+      var url = appSettings.url + 'space/message/new'
       console.log(url);
       return $http.post(url, newMessage).success(function(res) {
         if (res.message === "unAuthenticated") {
