@@ -36,7 +36,21 @@
           <img ng-src="{{picture.src}}" style="height:200px;width:200px;"/>
           {{space.zip}}
           <br>
-          <p> User: {{space._creator}} </p>
+          <p> Owner: {{space._creator}} </p>
+        <div class="messageinfo">
+          <form name="newMessage" style="margin-top:50px;">
+                <input name="messageTitle" ng-model="messageCtrl.newMessage.title" placeholder="title"/>
+              <br>
+              <br>
+                <input name="messageBody" ng-model="messageCtrl.newMessage.body" placeholder="How much would you like to rent this space for?"/>
+              <br>
+              <br>
+              <div>
+                <button type="button" name="messageSave" ng-click="messageCtrl.hostMessage()"> <h5>Send</h5> </button>
+              <br/>
+              </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
