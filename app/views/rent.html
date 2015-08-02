@@ -35,7 +35,8 @@
         <div ng-repeat="picture in space.pictures">
           <img ng-src="{{picture.src}}" style="height:200px;width:200px;"/>
           {{space.zip}}
-          {{space._creator}}
+          <br>
+          <p> User: {{space._creator}} </p>
       </div>
     </div>
   </div>
