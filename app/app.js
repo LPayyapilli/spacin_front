@@ -59,6 +59,13 @@
               templateUrl: 'app/views/background.html'
             }
            )
+      .when('/inbox',
+            {
+              controller: 'messageController',
+              controllerAs: 'messageCtrl',
+              templateUrl: 'app/views/inbox.html'
+            }
+            )
       // .otherwise({redirectTo: '/'});
   }).config(['$httpProvider', function($httpProvider){
     $httpProvider.defaults.withCredentials = true;

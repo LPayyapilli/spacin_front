@@ -1,24 +1,24 @@
-(function spaceFactoryIIFE(){
+(function messageFactoryIIFE(){
 
-  // Create a space factory
-  var spaceFactory = function($http, $location, appSettings) {
+  // Create a message factory
+  var messageFactory = function($http, $location, appSettings) {
     /////////////////Empty factory object////////////////////
     /////////////////////////////////////////////////////////
     var factory = {};
-    factory.spaces = [];
-    factory.space = {};
+    factory.messages = [];
+    factory.message = {};
 
-    /////////////////Create a New Space//////////////////////
+    /////////////////Create a New message//////////////////////
     /////////////////////////////////////////////////////////
-    factory.createSpace = function(newSpace) {
-      console.log(newSpace);
-      var url = appSettings.url + '/space/new'
-      return $http.post(url, newSpace).success(function(res) {
+    factory.createMessage = function(newmessage) {
+      console.log(newmessage);
+      var url = appSettings.url + '/message/new'
+      return $http.post(url, newmessage).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
           console.log(res);
-          angular.copy(res, factory.space);
+          angular.copy(res, factory.message);
           $location.path('/host');
         }
       }).error(function(err) {
@@ -27,16 +27,16 @@
       });
     };
 
-    /////////////////Get All Spaces//////////////////////////
+    /////////////////Get All messages//////////////////////////
     /////////////////////////////////////////////////////////
-    factory.getSpaces = function() {
-      var url = appSettings.url + '/space/all'
+    factory.getMessages = function() {
+      var url = appSettings.url + '/message/all'
         console.log(url);
       return  $http.get(url).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
-          angular.copy(res, factory.spaces);
+          angular.copy(res, factory.messages);
         }
       }).error(function(err) {
         console.log(err);
@@ -45,14 +45,14 @@
     };
 
 
-    factory.searchZip = function(query) {
-      var url = appSettings.url + '/space/search'
+    factory.searchUser = function(query) {
+      var url = appSettings.url + '/message/search'
       console.log(url);
-      var data = {zip: query};
+      var data = {user: query};
       console.log(data);
       return $http.post(url, data).success(function(res) {
         console.log(res);
-        angular.copy(res, factory.spaces);
+        angular.copy(res, factory.messages);
       }).error(function(err) {
         console.log(err);
       });
@@ -63,9 +63,9 @@
 
   /////////////////Dependency Injections///////////////////
   /////////////////////////////////////////////////////////
-  spaceFactory.$inject = ['$http', '$location', 'appSettings'];
+  messageFactory.$inject = ['$http', '$location', 'appSettings'];
 
   /////////////////Exporting Module////////////////////////
   /////////////////////////////////////////////////////////
-  angular.module('spacin').factory('spaceFactory', spaceFactory);
+  angular.module('spacin').factory('messageFactory', messageFactory);
 })();

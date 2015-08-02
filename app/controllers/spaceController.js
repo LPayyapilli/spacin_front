@@ -11,11 +11,6 @@
 
     /////////////////Show Space Function/////////////////////
     /////////////////////////////////////////////////////////
-    this.showSpaces = function() {
-      console.log('hello');
-      spaceFactory.showSpaces();
-    };
-
     function init() {
       spaceFactory.getSpaces();
 
@@ -23,20 +18,12 @@
 
     init();
 
-
-
-  // this.showMessages = function() {
-  //   messageFactory.getMessages();
-  // }
-  // this.getSpaces = function() {
-  //   spacesFactory.getSpaces();
-  // };
   this.hostSpace = function() {
       spaceFactory.createSpace(this.newSpace);
     }
   this.search = function() {
     console.log("yo");
-    spaceFactory.seachZip(this.searchQuery);
+    spaceFactory.searchUser(this.searchQuery);
   };
 };
   /////////////////Dependency Injections///////////////////
