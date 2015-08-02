@@ -13,6 +13,7 @@
     factory.createSpace = function(newSpace) {
       console.log(newSpace);
       var url = appSettings.url + '/space/new'
+      console.log(url);
       return $http.post(url, newSpace).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
