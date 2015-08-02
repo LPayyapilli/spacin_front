@@ -13,7 +13,7 @@
     /////////////////////////////////////////////////////////
     factory.createMessage = function(newmessage) {
       console.log(newmessage);
-      var url = appSettings.url + '/message/new'
+      var url = appSettings.url + '/spacin_front/message/new'
       return $http.post(url, newmessage).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
