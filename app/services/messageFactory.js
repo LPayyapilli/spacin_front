@@ -14,6 +14,7 @@
     factory.createMessage = function(newmessage) {
       console.log(newMessage);
       var url = appSettings.url + '/message/new'
+      console.log(url);
       return $http.post(url, newMessage).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
