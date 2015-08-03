@@ -43,7 +43,6 @@
 
     //////////////////Sets Prof Pic//////////////////////////
     /////////////////////////////////////////////////////////
-
     factory.newProfPic = function(newprofilePicture) {
       var data = {pic:newprofilePicture};
       var url = appSettings.url + '/user/newProfPic'
@@ -61,6 +60,8 @@
       });
     };
 
+    //////////////////Sets Back Pic//////////////////////////
+    /////////////////////////////////////////////////////////
     factory.newBackPic = function(newbackgroundPicture) {
       var data = {pic:newbackgroundPicture};
       var url = appSettings.url + '/user/newBackPic'

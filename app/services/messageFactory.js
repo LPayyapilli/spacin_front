@@ -46,7 +46,8 @@
       });
     };
 
-
+    /////////////////Search for User/////////////////////////
+    /////////////////////////////////////////////////////////
     factory.searchUser = function(query) {
       var url = appSettings.url + '/message/search'
       console.log(url);

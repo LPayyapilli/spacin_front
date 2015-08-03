@@ -1,6 +1,8 @@
 (function finalAppIIFE(){
   var app = angular.module('spacin', ['ngRoute', 'ngSanitize', 'ngS3upload']);
 
+/////////////////////////Configures controllers for each view/////////////////////
+//////////////////////////////////////////////////////////////////////////////////
   app.config(function($routeProvider){
     $routeProvider
       .when('/',

@@ -61,7 +61,7 @@
       });
     };
 
-    /////////////////Get One Space//////////////////////////
+    /////////////////Get One Space///////////////////////////
     /////////////////////////////////////////////////////////
     factory.findOne = function(spaceID) {
       var url = appSettings.url + '/space/' + spaceID
@@ -78,6 +78,8 @@
       });
     };
 
+    /////////////////Search by Zip///////////////////////////
+    /////////////////////////////////////////////////////////
     factory.searchZip = function(query) {
       var url = appSettings.url + '/space/search'
       var data = {zip: query};
