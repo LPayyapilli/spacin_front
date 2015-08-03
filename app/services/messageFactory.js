@@ -1,7 +1,7 @@
 (function messageFactoryIIFE(){
 
   // Create a message factory
-  var messageFactory = function($http, $location, appSettings) {
+  var messageFactory = function($http, $location, appSettings, spaceFactory) {
     /////////////////Empty factory object////////////////////
     /////////////////////////////////////////////////////////
     var factory = {};
@@ -12,16 +12,16 @@
     /////////////////Create a New Message////////////////////
     /////////////////////////////////////////////////////////
     factory.createMessage = function(newMessage) {
-      console.log(newMessage);
       var url = appSettings.url + '/space/message/new'
-      console.log(url);
       return $http.post(url, newMessage).success(function(res) {
+        console.log(res);
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
           console.log(res);
           angular.copy(res, factory.message);
-          $location.path('/host');
+          console.log(factory.message);
+          $location.path('/search');
         }
       }).error(function(err) {
         console.log("this is an error");
@@ -65,7 +65,7 @@
 
   /////////////////Dependency Injections///////////////////
   /////////////////////////////////////////////////////////
-  messageFactory.$inject = ['$http', '$location', 'appSettings'];
+  messageFactory.$inject = ['$http', '$location', 'appSettings', 'spaceFactory'];
 
   /////////////////Exporting Module////////////////////////
   /////////////////////////////////////////////////////////

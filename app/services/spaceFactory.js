@@ -13,7 +13,6 @@
     factory.createSpace = function(newSpace) {
       console.log(newSpace);
       var url = appSettings.url + '/space/new'
-      console.log(url);
       return $http.post(url, newSpace).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
@@ -64,8 +63,8 @@
 
     /////////////////Get One Space//////////////////////////
     /////////////////////////////////////////////////////////
-    factory.findOne = function() {
-      var url = appSettings.url + '/space/_id'
+    factory.findOne = function(spaceID) {
+      var url = appSettings.url + '/space/' + spaceID
         console.log(url);
       return  $http.get(url).success(function(res) {
         if (res.message === "unAuthenticated") {
