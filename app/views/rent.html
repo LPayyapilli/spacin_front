@@ -33,20 +33,24 @@
       <br>
       {{space.name}}
         <div ng-repeat="picture in space.pictures">
-          <img ng-src="{{picture.src}}" style="height:200px;width:200px;"/>
+          <img ng-src="{{picture.src}}" style="height:200px;width:200px;" ng-click="showDetails = ! showDetails"/>
           {{space.zip}}
           <br>
           <p> Owner: {{space._creator}} </p>
-        <div class="messageinfo" ng-controller="messageController as messageCtrl">
+          <p> ID: {{space._id}} </p>
+        <div class="messageinfo" ng-show="showDetails" ng-controller="messageController as messageCtrl">
           <form name="newMessage" style="margin-top:50px;">
                 <input name="messageTitle" ng-model="messageCtrl.newMessage.title" placeholder="Title"/>
+              <br>
+              <br>
+              <input name="spaceID" ng-model="spaceCtrl.space._id"  value="{{space._id}}"/>
               <br>
               <br>
                 <textarea name="messageBody" ng-model="messageCtrl.newMessage.body" placeholder="How much would you like to rent this space for? Any other thoughts or concerns?"/>
               <br>
               <br>
               <div>
-                <button type="button" name="messageSave" ng-click="messageCtrl.hostMessage()"> <h5>Send Message to Owner</h5> </button>
+                <button type="button" name="messageSave" ng-click="messageCtrl.findOne();messageCtrl.hostMessage()"> <h5>Send Message to Owner</h5> </button>
               <br/>
               </div>
           </form>

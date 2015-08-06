@@ -4,7 +4,6 @@
     /////////////////Empty message object//////////////////////
     /////////////////////////////////////////////////////////
     this.message = messageFactory.message;
-    this.newmessage = {};
     this.messages = messageFactory.messages;
     this.searchQuery = "";
     this.newMessage = {space: spaceFactory.space, recipient: spaceFactory.space._creator};
@@ -21,9 +20,12 @@
   this.hostMessage = function() {
     console.log(this.newMessage);
       messageFactory.createMessage(this.newMessage);
-    }
+  };
   this.search = function() {
     messageFactory.seachUser(this.searchQuery);
+  };
+  this.findOne = function() {
+    spaceFactory.findOne(spaceFactory.space._id);
   };
 };
   /////////////////Dependency Injections///////////////////

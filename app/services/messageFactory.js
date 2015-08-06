@@ -18,9 +18,7 @@
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
-          console.log(res);
           angular.copy(res, factory.message);
-          console.log(factory.message);
           $location.path('/search');
         }
       }).error(function(err) {

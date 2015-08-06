@@ -63,14 +63,15 @@
 
     /////////////////Get One Space///////////////////////////
     /////////////////////////////////////////////////////////
-    factory.findOne = function(spaceID) {
-      var url = appSettings.url + '/space/' + spaceID
+    factory.findOne = function(_id) {
+      var url = appSettings.url + '/space/' + _id
         console.log(url);
       return  $http.get(url).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
           angular.copy(res, factory.space);
+          console.log(factory.space);
         }
       }).error(function(err) {
         console.log(err);

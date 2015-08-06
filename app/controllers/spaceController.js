@@ -33,7 +33,7 @@
   /////////////////function to find one space////////////////
   ///////////////////////////////////////////////////////////
   this.findOne = function() {
-    spaceFactory.findOne(this.space);
+    spaceFactory.findOne(this.space._id);
   };
 
   /////////////////function to get a users space/////////////
