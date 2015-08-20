@@ -14,7 +14,6 @@
     factory.createMessage = function(newMessage) {
       var url = appSettings.url + '/space/message/new'
       return $http.post(url, newMessage).success(function(res) {
-        console.log(res);
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
@@ -36,7 +35,7 @@
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
-          angular.copy(res, factory.messages);
+          angular.copy(res, factory.message);
         }
       }).error(function(err) {
         console.log(err);

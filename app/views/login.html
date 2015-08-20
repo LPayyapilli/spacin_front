@@ -62,25 +62,31 @@
       <div class="4u 12u$(medium)">
         <span class="image fit"><img src="https://static.pexels.com/photos/2784/graffiti-bus.jpg" alt="" /></span>
         <h3>Create an account</h3>
+        <div ng-show="showFirst">
         <p>It gives you the ability search from thousands of locations to see where you would like to embrace your audience. You get to decide who sees your talent.</p>
+        </div>
         <ul class="actions">
-          <li><a href="#" class="button">More</a></li>
+          <li><a href="#" class="button" ng-click="showFirst = ! showFirst">More</a></li>
         </ul>
       </div>
       <div class="4u 12u$(medium)">
         <span class="image fit"><img src="https://static.pexels.com/photos/4439/city-art-graffiti-wall.jpg" alt="" /></span>
         <h3>Search for Space</h3>
+        <div ng-show="showSecond">
         <p>Use the customized search to find exactly who you would like to reach and what you would like to say. Its as easy as point, click, and it adds it to your spaces.</p>
+        </div>
         <ul class="actions">
-          <li><a href="#" class="button">More</a></li>
+          <li><a href="#" class="button" ng-click="showSecond = ! showSecond">More</a></li>
         </ul>
       </div>
       <div class="4u$ 12u$(medium)">
         <span class="image fit"><img src="https://static.pexels.com/photos/5391/cars-man-person-art.jpg" alt="" /></span>
         <h3>Message Space Owner</h3>
+        <div ng-show="showThird">
         <p>Send a direct message to the owner of the space describing how you would like to transform the space and why you are trying to reach their patrons.</p>
+        </div>
         <ul class="actions">
-          <li><a href="#" class="button">More</a></li>
+          <li><a href="#" class="button" ng-click="showThird = ! showThird">More</a></li>
         </ul>
       </div>
     </div>
