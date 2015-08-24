@@ -32,7 +32,7 @@
 
   /////////////////function to find one space////////////////
   ///////////////////////////////////////////////////////////
-  this.findOne = function() {
+  this.findOne = function(space_id) {
     spaceFactory.findOne(this.space._id);
   };
 

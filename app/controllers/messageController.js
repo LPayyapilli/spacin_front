@@ -24,7 +24,7 @@
   this.search = function() {
     messageFactory.seachUser(this.searchQuery);
   };
-  this.findOne = function() {
+  this.findOne = function(space_id) {
     spaceFactory.findOne(spaceFactory.space._id);
   };
 };

@@ -36,6 +36,7 @@
           <img ng-src="{{picture.src}}" style="height:200px;width:200px;" ng-click="showDetails = ! showDetails"/>
           {{space.zip}}
           <br>
+
           <p> Owner: {{space._creator}} </p>
           <p> ID: {{space._id}} </p>
         <div class="messageinfo" ng-show="showDetails" ng-controller="messageController as messageCtrl">
@@ -50,7 +51,7 @@
               <br>
               <br>
               <div>
-                <button type="button" name="messageSave" ng-click="messageCtrl.findOne();messageCtrl.hostMessage()"> <h5>Send Message to Owner</h5> </button>
+                <button type="button" name="messageSave" ng-click="messageCtrl.findOne(space._id);messageCtrl.hostMessage()"> <h5>Send Message to Owner</h5> </button>
               <br/>
               </div>
           </form>

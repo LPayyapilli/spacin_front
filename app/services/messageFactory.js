@@ -12,11 +12,12 @@
     /////////////////Create a New Message////////////////////
     /////////////////////////////////////////////////////////
     factory.createMessage = function(newMessage) {
-      var url = appSettings.url + '/space/message/new'
+      var url = appSettings.url + '/space/message/new/' + spaceFactory.space._id
       return $http.post(url, newMessage).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
+          console.log(res);
           angular.copy(res, factory.message);
           $location.path('/search');
         }
