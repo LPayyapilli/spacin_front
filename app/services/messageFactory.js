@@ -6,7 +6,7 @@
     /////////////////////////////////////////////////////////
     var factory = {};
     factory.messages = [];
-    factory.message = {};
+    factory.message = {recipient:spaceFactory.space._creator};
 
 
     /////////////////Create a New Message////////////////////
