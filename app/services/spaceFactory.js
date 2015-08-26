@@ -31,7 +31,6 @@
     /////////////////////////////////////////////////////////
     factory.getSpaces = function() {
       var url = appSettings.url + '/space/all'
-        console.log(url);
       return  $http.get(url).success(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
