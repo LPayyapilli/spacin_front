@@ -33,7 +33,7 @@
       <br>
       {{space.name}}
         <div ng-repeat="picture in space.pictures">
-          <img ng-src="{{picture.src}}" style="height:200px;width:200px;" ng-click="showDetails = ! showDetails"/>
+          <img ng-src="{{picture.src}}" style="height:200px;width:200px;" ng-click="showDetails = ! showDetails;messageCtrl.findOne(space._id); "/>
           {{space.zip}}
           <br>
 
@@ -51,7 +51,7 @@
               <br>
               <br>
               <div>
-                <button type="button" name="messageSave" ng-click="messageCtrl.findOne(space._id);messageCtrl.hostMessage()"> <h5>Send Message to Owner</h5> </button>
+                <button type="button" name="messageSave" ng-click="messageCtrl.hostMessage();"> <h5>Send Message to Owner</h5> </button>
               <br/>
               </div>
           </form>
