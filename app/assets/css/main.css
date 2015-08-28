@@ -2875,7 +2875,7 @@
 			font-size: 2em;
 		}
 
-		/*#header .actions {
+		#header .actions {
 			margin: 2.5em 0 0 0;
 			position: relative;
 		}
@@ -2890,7 +2890,7 @@
 				width: 1px;
 			}
 
-		#header .inner {
+		/*#header .inner {
 			-moz-transition: -moz-transform 1.5s ease, opacity 2s ease;
 			-webkit-transition: -webkit-transform 1.5s ease, opacity 2s ease;
 			-ms-transition: -ms-transform 1.5s ease, opacity 2s ease;
@@ -2945,7 +2945,7 @@
 		-ms-transform: scale(1.05);
 		transform: scale(1.05);
 		opacity: 0;
-	}
+	}*/
 
 		body.is-loading #header .inner .actions {
 			-moz-transform: translateY(30em);
@@ -2955,10 +2955,10 @@
 			opacity: 0;
 		}
 
-	body.is-loading #header:after {
+	/*body.is-loading #header:after {
 		opacity: 1;
-	}
-*/
+	}*/
+
 /* Footer */
 
 	#footer {
