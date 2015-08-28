@@ -2560,10 +2560,10 @@
 		background-color: transparent;
 		border-radius: 4px;
 
-		color: #ecf0f1;
+		color: black;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 1.25em;
+		font-size: 1em;
 		font-weight: 400;
 		height: 2.75em;
 		letter-spacing: 0em;
