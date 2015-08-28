@@ -2786,9 +2786,9 @@
 		text-align: center;
 	}
 
-/*		#header a {
+		/*#header a {
 			border-bottom-color: rgba(255, 255, 255, 0.5);
-		}
+		}*/
 
 			#header a:hover {
 				color: #ffffff;
@@ -2805,7 +2805,7 @@
 		#header header.major:after {
 			background: #ffffff;
 		}
-
+/*
 		#header input[type="submit"],
 		#header input[type="reset"],
 		#header input[type="button"],
@@ -2860,7 +2860,7 @@
 
 		#header ul.major-icons li .icon {
 			border-color: #ffffff;
-		}
+		}*/
 
 		#header .icon.major {
 			color: #ffffff;
@@ -2872,9 +2872,10 @@
 
 		#header p {
 			margin: 1em 0 0 0;
+			font-size: 5em;
 		}
 
-		#header .actions {
+		/*#header .actions {
 			margin: 2.5em 0 0 0;
 			position: relative;
 		}
@@ -2956,8 +2957,8 @@
 
 	body.is-loading #header:after {
 		opacity: 1;
-	}*/
-
+	}
+*/
 /* Footer */
 
 	#footer {
