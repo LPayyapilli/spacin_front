@@ -4,11 +4,7 @@
 @import url('font-awesome.min.css');
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 
-/*
-	Photon by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 	@import "libs/skel";
 
@@ -950,7 +946,7 @@
 		@include padding(9em, 0, (0,0,_size(element-margin),0));
 		@include dark(#4686a0);
 		background-attachment:	fixed,							fixed,							fixed;
-		background-image:		url('images/overlay2.png'),		url('images/overlay3.svg'),		linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 30%, _palette(accent6-alt));
+		background-image
 		background-position:	top left,						center center,					center center;
 		background-size:		auto,							cover,							cover;
 		overflow: hidden;

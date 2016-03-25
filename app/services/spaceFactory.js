@@ -65,7 +65,7 @@
     factory.findOne = function(_id) {
       var url = appSettings.url + '/space/' + _id
         console.log(url);
-      return  $http.get(url).success(function(res) {
+      return  $http.get(url).then(function(res) {
         if (res.message === "unAuthenticated") {
           $location.path('/');
         } else {
